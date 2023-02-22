@@ -11,9 +11,9 @@ class TCP:
         self.host_ip = socket.gethostbyname(self.domain)
         self.port_path_name = "list_port"
         self.send_path_name = "list_send"
-        self.proxy_file_path = "proxy_ua/proxy_list.json"
-        self.ua_file_path = "proxy_ua/ua_list.json"
-        self.referer_file_path = "referer_json_list/onions.json"
+        self.proxy_file_path = "Proxy_UA_Referer/proxy_list.json"
+        self.ua_file_path = "Proxy_UA_Referer/ua_list.json"
+        self.referer_file_path = "Proxy_UA_Referer/onions.json"
 
     def port_scan(self,start_port,end_port,list_port=[]):
         try:
