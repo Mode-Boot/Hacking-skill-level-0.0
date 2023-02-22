@@ -1,4 +1,4 @@
-# tcp_test_attack.py
+# tcp_attack.py
 
 I wrote the Dos attack as it is, but it feels like there is still a long way to go.
 
