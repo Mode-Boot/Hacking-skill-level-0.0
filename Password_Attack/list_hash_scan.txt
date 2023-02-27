@@ -1,0 +1,23 @@
+# list_hash_scan.py
+
+This is the list version of hash scans. I'm going to the list...
+
+/* 
+-th
+
+Please enter the target hash value.
+
+*/
+
+/*
+-path
+
+Please enter the file path in the list of passwords.
+
+*/
+
+Well, the previous (hash scan) was a little flashy, so I'll refrain from it...
+
+by Mode-Boot
+
+
