@@ -1,0 +1,24 @@
+# hash_scan.py <--version_0.5-->
+
+! Well, this can't be used in actual combat, but should I leave it as a view? It's like that.
+
+{low,upp,dig,pun}
+Please be sure to enter 4 in this selection.
+(If you don't enter anything N)
+<--hs-->
+/* 
+Find the hash value.
+*/
+<--hb-->
+/*
+Make a password and hash value.
+(rb) [
+Create a password at random. If it's a line, please enter the number of lines of the password.
+]
+(ip)[
+Please enter your new password.
+]
+*/
+The input process is a little rough, but do your best!
+
+by Mode-Boot
