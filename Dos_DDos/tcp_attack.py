@@ -66,8 +66,8 @@ class TCP:
             referer_file = open(self.referer_file_path,"r",encoding="utf-8")
             referer_json = json.loads(referer_file.read())
             referer_date = random.choice(referer_json)["referer"]
-            os.environ["http"] = proxy_date.strip("\n")
-            os.environ["https"] = proxy_date.strip("\n")
+            os.environ["http"] = "http://" + proxy_date.strip("\n") + "/"
+            os.environ["https"] = "https://" + proxy_date.strip("\n") + "/"
             while True:
                 point += 1
                 try:
@@ -92,8 +92,8 @@ class TCP:
                     ua_date = random.choice(ua_json)["user_agent"]
                     referer_date = random.choice(referer_json)["referer"]
                     port = random.choice(port_text["port_list"])
-                    os.environ["http"] = proxy_date.strip("\n")
-                    os.environ["https"] = proxy_date.strip("\n")
+                    os.environ["http"] = "http://" + proxy_date.strip("\n") + "/"
+                    os.environ["https"] = "https://" + proxy_date.strip("\n") + "/"
                     los_attack += 1
 
                 except BrokenPipeError:
@@ -136,6 +136,4 @@ def main():
 if __name__ == "__main__":
 
     main()
-
-
-        
+    
