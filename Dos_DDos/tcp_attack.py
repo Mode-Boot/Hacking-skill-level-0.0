@@ -77,7 +77,7 @@ class TCP:
         
                     requests = f"""
 
-                    POST / {self.target_url} HTTP/1.1\r\n/
+                    GET / {self.target_url} HTTP/1.1\r\n/
                     Host : http://{proxy_date}.strip("\n")\r\n/
                     Connection : Keep-Alive\r\n/
                     Content-Length : {send_date}\r\n/
