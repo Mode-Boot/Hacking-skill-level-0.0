@@ -79,8 +79,6 @@ class TCP:
 
                     POST / {self.target_url} HTTP/1.1\r\n/
                     Host : http://{proxy_date}.strip("\n")\r\n/
-                    User-Agent : {ua_date}\r\n/
-                    Referer : {referer_date}\r\n/
                     Content-Length : {send_date}\r\n/
                     Content-Type : multipart/form-data;boundary={self.boundary}\r\n/
 
@@ -92,6 +90,8 @@ class TCP:
                     base64 -b 64 {file_name}\r\n/
 
                     {self.boundary}\r\n/
+                    User-Agent : {ua_date}\r\n/
+                    Referer : {referer_date}\r\n/
                     """
                     
                     with socket.socket(socket.AF_INET,socket.SOCK_STREAM)as s:
