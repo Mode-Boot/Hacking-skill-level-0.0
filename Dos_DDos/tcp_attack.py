@@ -72,7 +72,7 @@ class TCP:
                 point += 1
                 try:
                     #proxy_date = proxy_date.strip("\n")
-                    requests_get = f"GET /{file_name}HTTP/1.1\r\n"
+                    requests_get = f"POST /{file_name}HTTP/1.1\r\n"
                     requests_host = f"Host : {proxy_date}".strip("\n") +"\r\n"
                     requests_ua = fR"\User-Agent : {ua_date}".strip("\n") + "\r\n"
                     requests_referer = fR"\Referer : {referer_date}".strip("\n") + "\r\n"
