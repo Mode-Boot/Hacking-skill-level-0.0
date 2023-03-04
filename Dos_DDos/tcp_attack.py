@@ -10,6 +10,7 @@ class TCP:
         for date in range(11):
             list_box.append(random.choice(string.digits))
         self.boundary = "--cutting-" + "".join(list_box)
+        self.target_url = target_url
         self.domain = urlparse(target_url).netloc
         self.host_ip = socket.gethostbyname(self.domain)
         self.port_path_name = "list_port"
@@ -76,8 +77,8 @@ class TCP:
         
                     requests = f"""
 
-                    POST / https://{self.host_ip}:{port_date} HTTP/1.1\r\n/
-                    Host : http://{proxy_date}.strip("\n")\r\n/
+                    POST / {self.target_url} HTTP/1.1\r\n/
+                    Host : https://{self.host_ip}:{port_date}.strip("\n")\r\n/
                     Content-Length : {send_date}\r\n/
                     Content-Type : multipart/form-data;boundary={self.boundary}\r\n/
 
