@@ -85,7 +85,7 @@ class TCP:
 
                     {self.boundary}\r\n/
                     Content-Disposition : form-date; name="...." :file_name={file_name}\r\n/
-                    Content-Type : text/plain\r\n/
+                    Content-Type : text/plain\r\n\r\n/
                     Content-Tranfer-Encoding : base64\r\n/
 
                     base64 -b 64 {file_name}\r\n/
