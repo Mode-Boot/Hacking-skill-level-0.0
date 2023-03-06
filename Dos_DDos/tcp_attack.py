@@ -1,4 +1,4 @@
-import socket,argparse,sys,os,pathlib,random,threading,itertools,datetime,base64,tcp_date
+import socket,argparse,sys,os,pathlib,random,threading,itertools,base64,tcp_date
 from urllib.parse import urlparse
 
 class TCP:
@@ -9,7 +9,6 @@ class TCP:
         self.host_ip = socket.gethostbyname(self.domain)
         self.cycle = itertools.cycle(r"/-\|")
         self.port_path,self.port_file = "port_date","port_"
-        self.date_time = datetime.datetime.now()
         self.los_attack = 0
         self.proxy_date,self.ua_date,self.referer_date = tcp_date.Request().proxy_list_build(),tcp_date.Request().ua_list_build(),tcp_date.Request().referer_list_build()
 
