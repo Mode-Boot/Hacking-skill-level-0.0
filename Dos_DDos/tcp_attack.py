@@ -150,7 +150,7 @@ class TCP:
                 Content-Length : {len(send_file)}\r\n/
                 Content-Type : multipart/form-data;boundary={boundary}\r\n/\r\n/
                 {boundary}\r\n/
-                Content-Disposition : form-date; name={} :file_name={send_path}\r\n/
+                Content-Disposition : form-date; name="" :file_name={send_path}\r\n/
                 Content-Type : text/plain\r\n/
                 Content-Tranfer-Encoding : base64\r\n/
                 {send_base64}\r\n/
