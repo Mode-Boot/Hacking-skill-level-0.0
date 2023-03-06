@@ -215,7 +215,8 @@ def main():
 
             for attack in range(int(parse.task)):
 
-                tcp.tcp_attack(parse.url,port_path,int(parse.send),send_path)
+                th = threading.Thread(target=tcp.tcp_attack,args=(parse.url,port_path,int(parse.send),send_path,))
+                th.start()
 
         except ModuleNotFoundError:
             tcp.pip_install()
