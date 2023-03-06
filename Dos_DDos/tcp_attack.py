@@ -1,4 +1,4 @@
-import socket,argparse,sys,os,pathlib,random,threading,itertools,datetime,json,base64,tcp_date
+import socket,argparse,sys,os,pathlib,random,threading,itertools,datetime,base64,tcp_date
 from urllib.parse import urlparse
 
 class TCP:
@@ -24,8 +24,6 @@ class TCP:
         self.referer_list = [referer.strip("\n") for referer in referer_date]
         del self.referer_list[18]
 
-        self.json_date = "json_date"
-        self.proxy_json,self.ua_json,self.referer_json = "proxy_date.json","ua_date.json","referer_date.json"
         self.send_path,self.send_file = "send_date","send_file.dat"
 
     def pip_install(self):
