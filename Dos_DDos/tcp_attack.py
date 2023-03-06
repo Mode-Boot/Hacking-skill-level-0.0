@@ -140,7 +140,7 @@ class TCP:
         
         try:
                 
-                request = """
+                request = f"""
                 POST / {self.target_url} /HTTP1.1\r\n/
                 Host : {proxy}\r\n/
                 Connection : Keep-Alive\r\n/
